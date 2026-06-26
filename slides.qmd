@@ -1,0 +1,51 @@
+---
+title: Insert hitle here
+author: 
+  name: An author
+  affiliation: 
+    name: University College London
+    department: Department of Quarto Slides
+  degrees: PhD
+  orcid: 0000-0001-2345-6789
+  url: https://www.ucl.ac.uk
+bibliography: citations.bib
+format: 
+  revealjs:
+    theme: [default, "ucl.scss"]
+    resources:
+      - "fonts/*.otf"
+#    embed-resources: true   # use to compile slides into single .html file
+    show-notes: false
+    slide-number: false
+    pdf-separate-fragments: true
+    template-partials:
+      - title-slide.html
+# R code execution
+knitr:
+  opts_chunk:
+    collapse: true
+    dev: svg
+    dev.args: { bg: "transparent" }
+---
+
+
+```{r setup}
+## load required packages here
+```
+
+# Section 1 { .dark }
+
+
+## Slide 1
+ 
+
+
+## Slide 2
+
+
+# Section 2 { .dark }
+
+## Slide 3
+
+
+## References
