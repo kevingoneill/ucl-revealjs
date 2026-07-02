@@ -3,9 +3,9 @@ function update_logo() {
     let logo = document.querySelector(".slide-logo");
     
     if (logo.parentElement.classList.contains('has-dark-background')) {
-        logo.src = "_extensions/ucl-revealjs/logo-light.svg";
+        logo.src = "_extensions/kevingoneill/ucl-revealjs/logo-light.svg";
     } else {
-        logo.src = "_extensions/ucl-revealjs/logo-dark.svg";
+        logo.src = "_extensions/kevingoneill/ucl-revealjs/logo-dark.svg";
     }
 }
 
