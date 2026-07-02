@@ -1,0 +1,30 @@
+---
+title: Untitled
+format:
+  ucl-revealjs-revealjs: default
+author: 
+  name: Your Name
+  affiliation: 
+    name: University College London
+    department: Department of Quarto Slides
+    url: https://www.ucl.ac.uk
+  degrees: PhD
+  orcid: 0000-0001-7401-9802
+  url: https://www.ucl.ac.uk
+# embed-resources: true  # use this option for publication
+---
+
+# Section 1 {.dark}
+
+## Introduction
+
+Here is a slide
+
+## Another slide
+
+Here is another slide
+
+# Section 2 {.dark}
+
+## And yet more slides
+

@@ -52,5 +52,5 @@ rsconnect/
 **/*.*~
 
 # quarto outputs
-slides.html
-slides_files
+template.html
+template_files
