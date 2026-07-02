@@ -11,7 +11,7 @@ contributes:
         - title-slide.html
       include-after-body:
         text: |
-          <script type="application/javascript" src="_extensions/kevingoneill/ucl-revealjs/logo.js"></script>
+          <script type="application/javascript" src="_extensions/kevingoneill/ucl/logo.js"></script>
 
 
           
