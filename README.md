@@ -1,8 +1,8 @@
 # ucl-revealjs: a University College London slide theme for Quarto
 
-This slide theme was developed to match UCL's [visual branding guidelines](https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines){target="_blank"}.
-It includes a custom font, [UCL Sans](https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/typography#font-tag){target="_blank"},
-as well as an approved [color scheme](https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/colour){target="_blank"}.
+This slide theme was developed to match UCL's [visual branding guidelines](https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines).
+It includes a custom font, [UCL Sans](https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/typography#font-tag),
+as well as an approved [color scheme](https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/colour).
 
 ## Installing
 
@@ -14,6 +14,8 @@ This will install the extension and create an example qmd file that you can use 
 
 ## Using
 
+To use the template format, just include `ucl-revealjs` as the document format:
+
 ``` markdown
 format:
   ucl-revealjs: default
@@ -22,6 +24,13 @@ format:
 ## Format Options
 
 Currently, formatting options are rather limited. Please submit an issue if you have a request.
+
+The main addition is a CSS class `dark`, which can be applied to a slide to display in dark mode:
+``` markdown
+# Slide title {.dark}
+
+This is a dark slide!
+```
 
 ## Example
 
