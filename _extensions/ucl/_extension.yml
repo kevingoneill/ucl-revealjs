@@ -6,12 +6,12 @@ contributes:
   formats:
     revealjs:
       theme: [default, ucl.scss]
-      logo: logo-dark.svg
+      logo: https://github.com/kevingoneill/ucl-revealjs/raw/refs/heads/main/_extensions/ucl/logo-dark.svg
       template-partials:
         - title-slide.html
       include-after-body:
         text: |
-          <script type="application/javascript" src="_extensions/kevingoneill/ucl/logo.js"></script>
+          <script type="application/javascript" src="https://github.com/kevingoneill/ucl-revealjs/raw/refs/heads/main/_extensions/ucl/logo.js"></script>
 
 
           
