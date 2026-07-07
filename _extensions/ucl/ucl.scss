@@ -27,7 +27,7 @@ $ucl-light-green: #1aab40;
 $body-bg: $ucl-pale-purple;
 $body-color: $ucl-dark-purple;
 $text-muted: $ucl-pale-purple;
-$link-color: $ucl-heritage-blue;
+$link-color: $ucl-bright-purple;
 $link-color-hover: $ucl-mid-purple;
 $selection-bg: $ucl-heritage-blue;
 $selection-color: $ucl-dark-purple;
@@ -45,7 +45,7 @@ $dark-bg-code-color: $ucl-heritage-blue;
 /* -------------------- Fonts ---------------------- */
 @font-face {
   font-family: UCLSans;
-  src: url('https://github.com/kevingoneill/ucl-revealjs/raw/refs/heads/main/_extensions/ucl/fonts/UCLSans-Bold.otf');
+  src: url('https://github.com/kevingoneill/ucl-revealjs/raw/refs/heads/main/_extensions/ucl/fonts/UCLSans-ExtraLight.otf');
   font-weight: 200;
   font-style: normal;
 }
@@ -144,7 +144,7 @@ $code-block-bg: $ucl-pale-purple;
 $code-block-border-color: lighten($body-color, 60%);
 $code-block-font-size: 0.55em;
 
-$code-color: $ucl-heritage-blue;
+$code-color: $ucl-bright-purple;
 $code-bg: transparent;
 
 /* -------------------- Tabsets ---------------------- */
@@ -202,11 +202,10 @@ $mermaid-node-fg-color: $ucl-dark-purple;
   }
 }
 
-.test {
-    background-color: transparent;
-    background: none;
+.box {
+    border-radius: 25px;
+    padding: 25px;
 }
-
 
 .center-horizontally {
     display: block !important;
@@ -217,6 +216,12 @@ $mermaid-node-fg-color: $ucl-dark-purple;
     margin: 0;
     position: absolute;
     top: 50%;
+}
+
+.center-flex {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .center-xy {
@@ -232,7 +237,7 @@ $mermaid-node-fg-color: $ucl-dark-purple;
     font-size: 0.75em;
 }
 
-.ref {
+.tiny {
     font-size: 0.5em;
 }
 
@@ -246,14 +251,17 @@ $mermaid-node-fg-color: $ucl-dark-purple;
     bottom: 0;
 }
 
-/*
-// cannot make items appear immediately
-.reveal.fragment.appear {
-    visibility: hidden;
-}
 
-.fragment.appear.visible {
-    visibility: visible;
+/*
+slides section .fragment  { 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: all 0s ease 0s;
+
+    &.visible {
+	opacity: 1;
+	visibility: visible;
+    }
 }
 */
 
