@@ -11,9 +11,9 @@ function update_logo() {
 
 
 Reveal.on('ready', (event) => {
-    setTimeout(update_logo, 10);
+    setTimeout(update_logo, 25);
 });
 
 Reveal.on('slidechanged', (event) => {
-    setTimeout(update_logo, 10);
+    setTimeout(update_logo, 25);
 });
