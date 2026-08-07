@@ -4,6 +4,8 @@ This slide theme was developed to match UCL's [visual branding guidelines](https
 It includes a custom font, [UCL Sans](https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/typography#font-tag),
 as well as an approved [color scheme](https://www.ucl.ac.uk/brand-and-experience/brand/visual-guidelines/colour).
 
+**This template is made only for official use by students, staff, and faculty of University College London.**
+
 ## Installing
 
 ```bash
