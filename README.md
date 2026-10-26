@@ -93,40 +93,38 @@ And for positioning:
 
 The file `_assets/plotting.R` defines all colors approved by the UCL branding guidelines for use in `R`, as well as a theme `theme_ucl()`. It also contains the function `hide_plot`, which allows one to animate sub-panels of a multi-panel figure:
 
-```markdown
+````markdown
 :::{.r-stack}
 ::::{.fragment}
-````{r}
+```{r}
 #| label: plot2-1
 #| fig-width: 10
 #| fig-height: 4
 (plot1 + hide_plot(plot1)) +
   plot_layout(guides="collect")
-````
+```
 ::::
 
 ::::{.fragment}
-````{r}
+```{r}
 #| label: plot2-2
 #| fig-width: 10
 #| fig-height: 4
 (plot1 + plot1) +
   plot_layout(guides="collect")
-````
+```
 ::::
 :::
-```
+````
 
 ### TikZ Figures
 
-The file `_assets/tikz_header.tex` includes TikZ styling for use in diagrams. I recommmend combining this with [the `quarto_tikz` extension](https://github.com/danmackinlay/quarto_tikz):
+The file `_assets/tikz_header.tex` includes TikZ styling for use in diagrams. I recommmend combining this with [the `quarto_tikz` extension](https://github.com/danmackinlay/quarto_tikz) (consider setting the extension option `svg-command: "pdf2svg {input} {output}"`):
 
-`svg-command: "pdf2svg {input} {output}"  # use pdf2svg because inkscape breaks fonts`
-
-```markdown
+````markdown
 :::{.r-stack height=600}
-::::{.fragment .center-flex}
-````{.tikz width=1000}
+::::{.fragment}
+```{.tikz width=1000}
 %%| filename: binary_causal_structure_1
 %%| additionalPackages: \usepackage{amsmath}
 \include{_assets/tikz_header.tex}
@@ -140,11 +138,11 @@ The file `_assets/tikz_header.tex` includes TikZ styling for use in diagrams. I 
     \node[unboxed, minimum size=0cm] (eqnC) [above = .5mm of eqnA] {$C \sim \bernoulli{p_C}$};
     \node[unboxed, minimum size=0cm, hidden] (eqnE) [below = .5mm of eqnA] {$E = \; C \wedge A$};
 \end{tikzpicture}
-````
+```
 ::::
 
-::::{.fragment .center-flex}
-````{.tikz width=1000}
+::::{.fragment}
+```{.tikz width=1000}
 %%| filename: binary_causal_structure_2
 %%| additionalPackages: \usepackage{amsmath}
 \include{_assets/tikz_header.tex}
@@ -158,11 +156,11 @@ The file `_assets/tikz_header.tex` includes TikZ styling for use in diagrams. I 
     \node[unboxed, minimum size=0cm] (eqnC) [above = .5mm of eqnA] {$C \sim \bernoulli{p_C}$};
     \node[unboxed, minimum size=0cm, hidden] (eqnE) [below = .5mm of eqnA] {$E = \; C \wedge A$};
 \end{tikzpicture}
-````
+```
 ::::
 
-::::{.fragment .center-flex}
-````{.tikz width=1000}
+::::{.fragment}
+```{.tikz width=1000}
 %%| filename: binary_causal_structure_3
 %%| additionalPackages: \usepackage{amsmath}
 \include{_assets/tikz_header.tex}
@@ -176,10 +174,10 @@ The file `_assets/tikz_header.tex` includes TikZ styling for use in diagrams. I 
     \node[unboxed, minimum size=0cm] (eqnC) [above = .5mm of eqnA] {$C \sim \bernoulli{p_C}$};
     \node[unboxed, minimum size=0cm] (eqnE) [below = .5mm of eqnA] {$E = \; C \wedge A$};
 \end{tikzpicture}
-````
+```
 ::::
 :::
-```
+````
 
 
 ## Example
