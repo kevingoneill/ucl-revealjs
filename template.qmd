@@ -11,20 +11,194 @@ author:
   degrees: PhD
   orcid: 0000-0001-7401-9802
   url: https://www.ucl.ac.uk
+
+bibliography: references.bib
+
 # embed-resources: true  # use this option for publication
 ---
 
+```{r}
+#| label: libraries
+#| include: false
+#| cache: false
+
+# required libraries for plotting utilities
+library(ggplot2)
+library(patchwork)
+source("_assets/plotting.R")
+
+# other required libraries
+library(dplyr)
+```
+
 # Section 1 {.dark}
 
-## Introduction
+## Font sizes
 
-Here is a slide
+There are a number of font classes avaliable:
 
-## Another slide
+:::{.columns}
+::::{.column width="30%"}
+[Extra tiny]{.extra-tiny}
 
-Here is another slide
+[Tiny]{.tiny}
+
+[Much smaller]{.much-smaller}
+
+[Smaller]{.smaller}
+
+[Regular]{}
+::::
+
+::::{.column width="5%"}
+::::
+
+::::{.column width="50%"}
+[Larger]{.larger}
+
+[Much larger]{.much-larger}
+
+[Huge]{.huge}
+::::
+:::
+
+## Positioning
+
+[Left]{.left}
+
+[Right]{.right}
+
+[Top]{.top}
+
+[Bottom]{.bottom}
+
+[Top Left]{.top-left}
+
+[Top Right]{.top-right}
+
+[Bottom Left]{.bottom-left}
+
+[Bottom Right]{.bottom-right}
+
+[Center]{.center-xy}
+
+[Center Horizontally]{.center-horizontally}
+
+[Center Vertically]{.center-vertically}
+
+## UCL themed plots
+
+[You can animate groups of data within a plot using the Quarto classes `.rstack` and `.fragment` along with the `data` argument in `ggplot2` geoms:]{.much-smaller}
+
+:::{.r-stack}
+::::{.fragment}
+```{r}
+#| label: plot-1
+#| fig-width: 5
+#| fig-height: 4
+mtcars2 <- within(mtcars, {
+  vs <- factor(vs, labels = c("V-shaped", "Straight"))
+  am <- factor(am, labels = c("Automatic", "Manual"))
+  cyl  <- factor(cyl)
+  gear <- factor(gear)
+})
+
+ggplot(mtcars2, aes(x = wt, y = mpg, color = gear)) +
+  geom_point(data=~ filter(., gear == 3)) +
+  theme_ucl() +
+  scale_color_manual(values=ucl_other_palette) +
+  coord_cartesian(xlim=c(1, 6), ylim=c(0, 35))
+```
+::::
+
+::::{.fragment}
+```{r}
+#| label: plot-2
+#| fig-width: 5
+#| fig-height: 4
+ggplot(mtcars2, aes(x = wt, y = mpg, color = gear)) +
+  geom_point(data=~ filter(., gear %in% c(3,4))) +
+  theme_ucl() +
+  scale_color_manual(values=ucl_other_palette) +
+  coord_cartesian(xlim=c(1, 6), ylim=c(0, 35))
+```
+::::
+
+::::{.fragment}
+```{r}
+#| label: plot-3
+#| fig-width: 5
+#| fig-height: 4
+plot1 <- ggplot(mtcars2, aes(x = wt, y = mpg, color = gear)) +
+  geom_point() +
+  theme_ucl() +
+  scale_color_manual(values=ucl_other_palette) +
+  coord_cartesian(xlim=c(1, 6), ylim=c(0, 35))
+
+plot1
+```
+::::
+:::
+
+
+[@ggplot]{.bottom-left .tiny}
+
+## UCL themed plots
+
+[Another option is to combine plots using `patchwork`, revealing different subplots using the function `hide_plot`:]{.much-smaller}
+
+
+:::{.r-stack}
+::::{.fragment}
+```{r}
+#| label: plot2-1
+#| fig-width: 10
+#| fig-height: 4
+(plot1 + hide_plot(plot1)) +
+  plot_layout(guides="collect")
+```
+::::
+
+::::{.fragment}
+```{r}
+#| label: plot2-2
+#| fig-width: 10
+#| fig-height: 4
+(plot1 + plot1) +
+  plot_layout(guides="collect")
+```
+::::
+:::
+
+[@patchwork]{.bottom-left .tiny}
+
 
 # Section 2 {.dark}
 
-## And yet more slides
+## FontAwesome icons
 
+[You can include icons using [FontAwesome](https://fontawesome.com):]{.much-smaller}
+
+[<i class="fa-solid fa-face-smile"></i>]{.huge}
+
+## Boxes
+
+:::{.columns}
+::::{.column .box .much-smaller width="40%"}
+- This is a boxed column
+- With some content
+::::
+
+::::{.column width="5%"}
+::::
+
+::::{.column .box .much-smaller width="40%" .fragment}
+- This is a another boxed column
+- With some more content
+::::
+:::
+
+
+# {.dark}
+
+## References

@@ -21,9 +21,6 @@ $ucl-light-orange: #e66c37;
 $ucl-light-pink: #e645ab;
 $ucl-light-green: #1aab40;
 
-
-
-
 $body-bg: $ucl-white;
 $body-color: $ucl-dark-purple;
 $text-muted: $ucl-pale-purple;
@@ -194,6 +191,9 @@ $mermaid-node-fg-color: $ucl-dark-purple;
 /*-- scss:rules --*/
 .slide-logo {
     content: url('https://cdn.ucl.ac.uk/logos/ucl/ucl-logo--primary.svg');
+    position: absolute;
+    bottom: 35px !important;
+    right: 50px !important;
 }
 
 .has-dark-background .slide-logo {
@@ -209,6 +209,8 @@ $mermaid-node-fg-color: $ucl-dark-purple;
   }
 }
 
+
+// draw rounded box
 .box {
     background-color: $ucl-light-purple;
     color: $ucl-dark-purple;
@@ -217,21 +219,18 @@ $mermaid-node-fg-color: $ucl-dark-purple;
     padding: 25px;
 }
 
+
+// centering classis
 .center-horizontally {
-    display: block !important;
-    margin: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .center-vertically {
     margin: 0;
     position: absolute;
     top: 50%;
-}
-
-.center-flex {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
 }
 
 .center-xy {
@@ -243,6 +242,8 @@ $mermaid-node-fg-color: $ucl-dark-purple;
     transform: translateY(-50%), translateX(-50%);
 }
 
+
+// text size classes
 .much-smaller {
     font-size: 0.75em;
 }
@@ -267,14 +268,51 @@ $mermaid-node-fg-color: $ucl-dark-purple;
     font-size: 4em;
 }
 
+
+
+.left {
+    position: absolute;
+    left: 0px;
+}
+
 .right {
     position: absolute;
-    right: 10px;
+    right: 0px;
+}
+
+.top {
+    position: absolute;
+    top: 10px;
 }
 
 .bottom {
     position: absolute;
-    bottom: 10px;
+    bottom: -10px;
+}
+
+.top-left {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+}
+
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+}
+
+// offset upwards to avoid UCL logo
+.bottom-right {
+    position: absolute;
+    bottom: 35px;
+    right: 0px;
 }
 
 
