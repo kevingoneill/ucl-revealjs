@@ -119,7 +119,7 @@ The file `_assets/plotting.R` defines all colors approved by the UCL branding gu
 
 ### TikZ Figures
 
-The file `_assets/tikz_header.tex` includes TikZ styling for use in diagrams. I recommmend combining this with [the `quarto_tikz` extension](https://github.com/danmackinlay/quarto_tikz) (consider setting the extension option `svg-command: "pdf2svg {input} {output}"`):
+The file `tikz_header.tex` includes TikZ styling for use in diagrams. I recommmend combining this with [the `quarto_tikz` extension](https://github.com/danmackinlay/quarto_tikz) (consider setting the extension option `svg-command: "pdf2svg {input} {output}"`):
 
 ````markdown
 :::{.r-stack height=600}
@@ -127,7 +127,7 @@ The file `_assets/tikz_header.tex` includes TikZ styling for use in diagrams. I 
 ```{.tikz width=1000}
 %%| filename: binary_causal_structure_1
 %%| additionalPackages: \usepackage{amsmath}
-\include{_assets/tikz_header.tex}
+\include{tikz_header.tex}
 \begin{tikzpicture}[-Latex]
 	\node[state, hidden] (E) {$E$};
     \node[state] (C) [above left = of E] {$C$};
@@ -145,7 +145,7 @@ The file `_assets/tikz_header.tex` includes TikZ styling for use in diagrams. I 
 ```{.tikz width=1000}
 %%| filename: binary_causal_structure_2
 %%| additionalPackages: \usepackage{amsmath}
-\include{_assets/tikz_header.tex}
+\include{tikz_header.tex}
 \begin{tikzpicture}[-Latex]
 	\node[state, hidden] (E) {$E$};
     \node[state] (C) [above left = of E] {$C$};
@@ -163,7 +163,7 @@ The file `_assets/tikz_header.tex` includes TikZ styling for use in diagrams. I 
 ```{.tikz width=1000}
 %%| filename: binary_causal_structure_3
 %%| additionalPackages: \usepackage{amsmath}
-\include{_assets/tikz_header.tex}
+\include{tikz_header.tex}
 \begin{tikzpicture}[-Latex]
 	\node[state] (E) {$E$};
     \node[state] (C) [above left = of E] {$C$};

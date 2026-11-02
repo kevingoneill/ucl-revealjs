@@ -54,3 +54,5 @@ rsconnect/
 # quarto outputs
 template.html
 template_files
+/.quarto/
+**/*.quarto_ipynb
