@@ -1,6 +1,6 @@
 title: ucl-revealjs
 author: Kevin O'Neill
-version: 1.0.0
+version: 1.1.0
 quarto-required: ">=1.9.0"
 contributes:
   formats:
@@ -11,3 +11,4 @@ contributes:
         - title-slide.html
       include-in-header:
         - text: <script src="_assets/fontawesome.js"></script>
+      csl: https://github.com/citation-style-language/styles-distribution/raw/refs/heads/master/apa.csl

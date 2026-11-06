@@ -189,6 +189,163 @@ $mermaid-node-fg-color: $ucl-dark-purple;
 
 
 /*-- scss:rules --*/
+.ucl-white {
+    color: $ucl-white !important;
+}
+.ucl-dark-purple {
+    color: $ucl-dark-purple !important;
+}
+.ucl-bright-purple {
+    color: $ucl-bright-purple !important;
+}
+.ucl-mid-purple {
+    color: $ucl-mid-purple !important;
+}
+
+// supporting colors
+.ucl-light-purple {
+    color: $ucl-light-purple !important;
+}
+.ucl-pale-purple {
+    color: $ucl-pale-purple !important;
+}
+.ucl-heritage-blue {
+    color: $ucl-heritage-blue !important;
+}
+
+// other colors
+.ucl-dark-blue {
+    color: $ucl-dark-blue !important;
+}
+.ucl-dark-red {
+    color: $ucl-dark-red !important;
+}
+.ucl-dark-green {
+    color: $ucl-dark-green !important;
+}
+.ucl-light-blue {
+    color: $ucl-light-blue !important;
+}
+.ucl-light-orange {
+    color: $ucl-light-orange !important;
+}
+.ucl-light-pink {
+    color: $ucl-light-pink !important;
+}
+.ucl-light-green { 
+    color: $ucl-light-green !important;
+}
+
+// background colors
+.ucl-white-bg {
+    background-color: $ucl-white !important;
+}
+.ucl-dark-purple-bg {
+    background-color: $ucl-dark-purple !important;
+}
+.ucl-bright-purple-bg {
+    background-color: $ucl-bright-purple !important;
+}
+.ucl-mid-purple-bg {
+    background-color: $ucl-mid-purple !important;
+}
+
+// supporting colors
+.ucl-light-purple-bg {
+    background-color: $ucl-light-purple !important;
+}
+.ucl-pale-purple-bg {
+    background-color: $ucl-pale-purple !important;
+}
+.ucl-heritage-blue-bg {
+    background-color: $ucl-heritage-blue !important;
+}
+
+// other colors
+.ucl-dark-blue-bg {
+    background-color: $ucl-dark-blue !important;
+}
+.ucl-dark-red-bg {
+    background-color: $ucl-dark-red !important;
+}
+.ucl-dark-green-bg {
+    background-color: $ucl-dark-green !important;
+}
+.ucl-light-blue-bg {
+    background-color: $ucl-light-blue !important;
+}
+.ucl-light-orange-bg {
+    background-color: $ucl-light-orange !important;
+}
+.ucl-light-pink-bg {
+    background-color: $ucl-light-pink !important;
+}
+.ucl-light-green-bg { 
+    background-color: $ucl-light-green !important;
+}
+
+// outline colors
+.ucl-white-outline {
+    outline-color: $ucl-white !important;
+    outline: 5px solid !important;
+}
+.ucl-dark-purple-outline {
+    outline-color: $ucl-dark-purple !important;
+    outline: 5px solid !important;
+}
+.ucl-bright-purple-outline {
+    outline-color: $ucl-bright-purple !important;
+    outline: 5px solid !important;
+}
+.ucl-mid-purple-outline {
+    outline-color: $ucl-mid-purple !important;
+    outline: 5px solid !important;
+}
+
+// supporting colors
+.ucl-light-purple-outline {
+    outline-color: $ucl-light-purple !important;
+    outline: 5px solid !important;
+}
+.ucl-pale-purple-outline {
+    outline-color: $ucl-pale-purple !important;
+    outline: 5px solid !important;
+}
+.ucl-heritage-blue-outline {
+    outline-color: $ucl-heritage-blue !important;
+    outline: 5px solid !important;
+}
+
+// other colors
+.ucl-dark-blue-outline {
+    outline-color: $ucl-dark-blue !important;
+    outline: 5px solid !important;
+}
+.ucl-dark-red-outline {
+    outline-color: $ucl-dark-red !important;
+    outline: 5px solid !important;
+}
+.ucl-dark-green-outline {
+    outline-color: $ucl-dark-green !important;
+    outline: 5px solid !important;
+}
+.ucl-light-blue-outline {
+    outline-color: $ucl-light-blue !important;
+    outline: 5px solid !important;
+}
+.ucl-light-orange-outline {
+    outline-color: $ucl-light-orange !important;
+    outline: 5px solid !important;
+}
+.ucl-light-pink-outline {
+    outline-color: $ucl-light-pink !important;
+    outline: 5px solid !important;
+}
+.ucl-light-green-outline { 
+    outline-color: $ucl-light-green !important;
+    outline: 5px solid !important;
+}
+
 .slide-logo {
     content: url('https://cdn.ucl.ac.uk/logos/ucl/ucl-logo--primary.svg');
     position: absolute;
@@ -221,7 +378,7 @@ $mermaid-node-fg-color: $ucl-dark-purple;
 
 
 // centering classis
-.center-horizontally {
+.center-div-horizontally {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -232,6 +389,15 @@ $mermaid-node-fg-color: $ucl-dark-purple;
     position: absolute;
     top: 50%;
 }
+
+.center-horizontally {
+    margin: 0;
+    position: relative;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
 
 .center-xy {
     margin: 0;

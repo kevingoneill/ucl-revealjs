@@ -9,12 +9,12 @@ author:
     department: Department of Quarto Slides
     url: https://www.ucl.ac.uk
   degrees: PhD
-  orcid: 0000-0001-7401-9802
+  orcid: 0000-0000-0000-0000
   url: https://www.ucl.ac.uk
 
 bibliography: references.bib
 
-# embed-resources: true  # use this option for publication
+embed-resources: true  # use this option for publication
 ---
 
 ```{r}

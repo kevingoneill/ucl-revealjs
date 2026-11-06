@@ -50,6 +50,7 @@ rsconnect/
 
 # temporary files
 **/*.*~
+\#*.*\#
 
 # quarto outputs
 template.html
